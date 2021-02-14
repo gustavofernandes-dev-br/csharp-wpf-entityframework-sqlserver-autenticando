@@ -1,0 +1,110 @@
+﻿<Window x:Class="NewPDV.Formularios.wpfConfiguracoes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NewPDV"        
+        mc:Ignorable="d" 
+        Style="{StaticResource wpfPadrao}"       
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="0" Background="{DynamicResource PadraoBackGround}" >
+        <Grid Background="{StaticResource GridForm}" Margin="2">
+            <Grid Width="200"
+                  Background="{DynamicResource PadraoBackGround}"
+                  HorizontalAlignment="Left">
+                <Label Margin="0,3,0,0" FontSize="14" >
+                    <StackPanel Width='200' Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <TextBlock Margin="5,0,0,0" HorizontalAlignment="Left">Configurações</TextBlock>
+                    </StackPanel>
+                </Label>
+                <Button Width="200" Height="40" VerticalAlignment="Top" Margin="0,60,0,0" x:Name="btnUsuarios"
+                     Style="{StaticResource BotaoPadrao}" Click="btnUsuarios_Click"  >
+                    <TextBlock TextAlignment="Left" Width="150"  FontWeight="DemiBold" HorizontalAlignment="Left" VerticalAlignment="Center">Usuarios</TextBlock>
+                </Button>
+                <Button Width="200" Height="40" VerticalAlignment="Top" Margin="0,100,0,0" x:Name="btnTema"
+                     Style="{StaticResource BotaoPadrao}" Click="btnTema_Click">
+                    <TextBlock TextAlignment="Left" Width="150"  FontWeight="DemiBold" HorizontalAlignment="Left" VerticalAlignment="Center">Tema</TextBlock>
+                </Button>
+                <Button Width="200" Height="40" VerticalAlignment="Top" Margin="0,160,0,0" x:Name="btnteste"
+                     Style="{StaticResource BotaoPadrao}" Click="btnteste_Click" >
+                    <TextBlock TextAlignment="Left" Width="150" FontWeight="DemiBold" HorizontalAlignment="Left" VerticalAlignment="Center">Teste</TextBlock>
+                </Button>
+            </Grid>
+            <Grid Margin="200,40,0,0" x:Name="gridTema" Visibility="Visible">
+                <Grid Margin="10" Width="750" HorizontalAlignment="Left">
+
+                    <Label FontSize="20" Margin="400,0,0,0" FontWeight="Bold">Fonte</Label>
+                    <Grid Margin="400,30,0,30">
+                        <StackPanel Orientation="Vertical">
+                            <Label MouseLeftButtonDown="LabelFont"  FontSize="16" FontFamily="Segoe UI Semibold" >Fonte do Sistema (Segoe UI Semibold)</Label>
+                            <Label MouseLeftButtonDown="LabelFont"  FontSize="16" FontFamily="Arial">Fonte do Sistema (Arial)</Label>
+                            <Label MouseLeftButtonDown="LabelFont"  FontSize="16" FontFamily="Verdana">Fonte do Sistema (Verdana)</Label>
+                            <Label MouseLeftButtonDown="LabelFont"  FontSize="16" FontFamily="Tempus Sans ITC">Fonte do Sistema (Tempus Sans ITC)</Label>
+                            <Label MouseLeftButtonDown="LabelFont"  FontSize="16" FontFamily="Segoe Print">Fonte do Sistema (Segoe Print)</Label>
+                            <Label MouseLeftButtonDown="LabelFont"  FontSize="16" FontFamily="Perpetua Titling MT">Fonte do Sistema (Perpetua Titling MT)</Label>
+                            <Label MouseLeftButtonDown="LabelFont"  FontSize="16" FontFamily="MV Boli">Fonte do Sistema (MV Boli)</Label>
+                            <Label MouseLeftButtonDown="LabelFont"  FontSize="16" FontFamily="Lucida Console">Fonte do Sistema (Lucida Console)</Label>
+                            <Label MouseLeftButtonDown="LabelFont"  FontSize="16" FontFamily="Lucida Handwriting">Fonte do Sistema (Lucida Handwriting)</Label>
+                            <Label MouseLeftButtonDown="LabelFont"  FontSize="16" FontFamily="Source Sans Pro Black">Fonte do Sistema (Source Sans Pro Black)</Label>
+                            <Label MouseLeftButtonDown="LabelFont"  FontSize="16" FontFamily="Lucida Sans Unicode">Fonte do Sistema (Lucida Sans Unicode)</Label>
+                            <Label MouseLeftButtonDown="LabelFont"  FontSize="16" FontFamily="Tahoma">Fonte do Sistema (Tahoma)</Label>
+                            <StackPanel Margin="30" Orientation="Horizontal">
+                                <Button x:Name="btnFonteMenos"  Width="30" Height="30" FontFamily="Showcard Gothic" Click="btnFonteMenos_Click">-</Button>
+                                <Button x:Name="btnFonteMais"  Margin="5,0,0,0" Width="30" Height="30" FontFamily="Showcard Gothic" Click="btnFonteMais_Click">+</Button>
+                                <Label x:Name="lblTamanhoFonte" >Tamanho Fonte</Label>
+                            </StackPanel>
+                        </StackPanel>
+
+                    </Grid>
+                    <Label FontSize="20" Margin="30,0,0,0" VerticalAlignment="Top" FontWeight="Bold">Cor padrão</Label>
+
+                    <Grid  Margin="30" Width="350" HorizontalAlignment="Left" >
+                        <StackPanel>
+                            <Button Foreground="#000000" Tag="#000000" Margin="5" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#ff9ff3" Height="50" Width="60" Click="Button_Click">Texto</Button>
+                            <Button Foreground="#FFFFFF" Tag="#FFFFFF"  Margin="5" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#f368e0" Height="50" Width="60" Click="Button_Click">Texto</Button>
+                            <Button Foreground="#000000" Tag="#000000" Margin="5" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#00d2d3" Height="50" Width="60"  Click="Button_Click">Texto</Button>
+                            <Button Foreground="#FFFFFF" Tag="#FFFFFF"   Margin="5" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#01a3a4" Height="50" Width="60"  Click="Button_Click">Texto</Button>
+                            <Button Foreground="#000000" Tag="#000000" Margin="5" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#feca57" Height="50" Width="60"  Click="Button_Click">Texto</Button>
+                            <Button Foreground="#FFFFFF" Tag="#FFFFFF"   Margin="5" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#ff9f43" Height="50" Width="60"  Click="Button_Click">Texto</Button>
+                            <Button Foreground="#000000" Tag="#000000" Margin="5" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#54a0ff" Height="50" Width="60"  Click="Button_Click">Texto</Button>
+                            <Button Foreground="#FFFFFF" Tag="#FFFFFF"   Margin="5" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#2e86de" Height="50" Width="60"  Click="Button_Click">Texto</Button>
+                            <Button Foreground="#FFFFFF" Tag="#FFFFFF"   Margin="5" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#ff6b6b" Height="50" Width="60"  Click="Button_Click">Texto</Button>
+                        </StackPanel>
+                        <StackPanel Margin="70,0,0,0">
+                            <Button Foreground="#FFFFFF" Tag="#FFFFFF"   HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" Background="#ee5253" Height="50" Width="60" Click="Button_Click">Texto</Button>
+                            <Button  Foreground="#FFFFFF" Tag="#FFFFFF"  HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" Background="#5f27cd" Height="50" Width="60" Click="Button_Click">Texto</Button>
+                            <Button Foreground="#FFFFFF" Tag="#FFFFFF"   HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" Background="#341f97" Height="50" Width="60" Click="Button_Click">Texto</Button>
+                            <Button  Foreground="#000000" Tag="#000000" HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" Background="#48dbfb"  Height="50" Width="60" Click="Button_Click">Texto</Button>
+                            <Button Foreground="#FFFFFF" Tag="#FFFFFF"   HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" Background="#0abde3" Height="50" Width="60" Click="Button_Click">Texto</Button>
+                            <Button  Foreground="#000000" Tag="#000000" HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" Background="#c8d6e5" Height="50" Width="60" Click="Button_Click">Texto</Button>
+                            <Button Foreground="#FFFFFF" Tag="#FFFFFF"   HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" Background="#8395a7" Height="50" Width="60" Click="Button_Click">Texto</Button>
+                            <Button  Foreground="#000000" Tag="#000000" HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" Background="#1dd1a1" Height="50" Width="60" Click="Button_Click">Texto</Button>
+                            <Button Foreground="#FFFFFF" Tag="#FFFFFF"   HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" Background="#10ac84" Height="50" Width="60" Click="Button_Click">Texto</Button>
+
+                        </StackPanel>
+                        <StackPanel Margin="140,0,0,0">
+                            <Button Foreground="#FFFFFF" Tag="#FFFFFF"   HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" Background="#576574" Height="50" Width="60" Click="Button_Click">Texto</Button>
+                            <Button Foreground="#FFFFFF" Tag="#FFFFFF"   HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" Background="#222f3e" Height="50" Width="60" Click="Button_Click">Texto</Button>
+                            <Button  Foreground="#000000" Tag="#000000" HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" Background="#ffeaa7" Height="50" Width="60" Click="Button_Click">Texto</Button>
+                            <Button Foreground="#FFFFFF" Tag="#FFFFFF"   HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" Background="#fdcb6e" Height="50" Width="60" Click="Button_Click">Texto</Button>
+                            <Button Foreground="#FFFFFF" Tag="#FFFFFF"   HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" Background="#00cec9" Height="50" Width="60" Click="Button_Click">Texto</Button>
+                            <Button Foreground="#000000" Tag="#000000"  HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" Background="#55efc4" Height="50" Width="60" Click="Button_Click">Texto</Button>
+                            <Button  Foreground="#FFFFFF" Tag="#FFFFFF"  HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" Background="#fd79a8" Height="50" Width="60" Click="Button_Click">Texto</Button>
+                            <Button  Foreground="#FFFFFF" Tag="#FFFFFF"  HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" Background="#e84393" Height="50" Width="60" Click="Button_Click">Texto</Button>
+                            <Button  Foreground="#FFFFFF" Tag="#FFFFFF"  HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" Background="Black" Height="50" Width="60" Click="Button_Click">Texto</Button>
+
+                        </StackPanel>
+                        <StackPanel Margin="210,0,0,0">
+                            <Button  FontSize="16" Tag="#FFFFFF"  HorizontalAlignment="Left" Margin="5,5,0,5" VerticalAlignment="Top" Background="#FFC7BCBC" Height="50" Width="109" Click="Button_Click">Mais Cores</Button>
+
+
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+
+
+            </Grid>
+
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,2 @@
+enable-migrations
+add-migration nome do migrations

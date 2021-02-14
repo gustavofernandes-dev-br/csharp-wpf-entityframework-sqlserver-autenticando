@@ -1,0 +1,146 @@
+﻿<Window x:Name="frmUsuarios" x:Class="NewPDV.Formularios.wpfUsuarios"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NewPDV"        
+        mc:Ignorable="d"      
+        Template="{DynamicResource WindowControlTemplate1}"
+        Style="{StaticResource wpfPadrao}" 
+        Background="{DynamicResource PadraoBackGround}"           
+        WindowStartupLocation="CenterScreen" Title="Usuários" >
+    <Grid Margin="0" Background="{StaticResource GridForm}" >
+        <Grid Margin="20,0,0,0" x:Name="quaDados" Visibility="Visible">
+            <Grid Height="80" VerticalAlignment="Top">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button x:Name="btnSalvar"  Width="120" Height="40" HorizontalAlignment="Right"
+                        Margin="5"
+                        Style="{StaticResource BotaoPadrao}" Click="btnSalvar_Click" >
+                        <StackPanel Width="100" Orientation="Horizontal" HorizontalAlignment="Left">
+                            <Image VerticalAlignment="Center" Margin="5" HorizontalAlignment="Left" Width="20" Height="20" Source="/imagens/white/Salvar.png"/>
+                            <TextBlock VerticalAlignment="Center" Margin="5">Salvar</TextBlock>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="btnVoltar"  Width="120" Height="40" HorizontalAlignment="Right"
+                        Margin="5"
+                        Style="{StaticResource BotaoPadrao}" Click="btnVoltar_Click" >
+                        <StackPanel Width="100" Orientation="Horizontal" HorizontalAlignment="Left">
+                            <Image VerticalAlignment="Center" Margin="5" HorizontalAlignment="Left" Width="20" Height="20" Source="/imagens/white/voltar.png"/>
+                            <TextBlock VerticalAlignment="Center" Margin="5">Voltar</TextBlock>
+                        </StackPanel>
+                    </Button>
+                   
+                </StackPanel>
+            </Grid>
+
+
+            <Grid Margin="0,80,0,0" Height="60" VerticalAlignment="Top" >
+                <Label FontFamily="{DynamicResource fonteFamilia}">Código</Label>
+                <TextBox Style="{StaticResource TextBox }"  VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="5"  Width="50" Height="30"></TextBox>
+                <Label FontFamily="{DynamicResource fonteFamilia}" Margin="65,0,0,0">Usuário</Label>
+                <TextBox Style="{StaticResource TextBox }" Margin="70,0,0,5" VerticalAlignment="Bottom" HorizontalAlignment="Left"  Width="200" ></TextBox>
+            </Grid>
+        </Grid>
+
+        <Grid Margin="0,0,0,0" x:Name="quaPesquisa" Visibility="Collapsed">
+            <Grid Height="80" VerticalAlignment="Top">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button x:Name="btnIncluir"  Width="120" Height="40" HorizontalAlignment="Right"
+                        Margin="5"
+                        Style="{StaticResource BotaoPadrao}" Click="btnIncluir_Click" >
+                        <StackPanel Width="100" Orientation="Horizontal" HorizontalAlignment="Left">
+                            <Image VerticalAlignment="Center" Margin="5" HorizontalAlignment="Left" Width="20" Height="20" Source="/imagens/white/add.png"/>
+                            <TextBlock VerticalAlignment="Center" Margin="5">Incluir</TextBlock>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="btnAlterar"  Width="120" Height="40" HorizontalAlignment="Right"
+                        Margin="5"
+                        Style="{StaticResource BotaoPadrao}" Click="btnAlterar_Click" >
+                        <StackPanel Width="100" Orientation="Horizontal" HorizontalAlignment="Left">
+                            <Image VerticalAlignment="Center" Margin="5" HorizontalAlignment="Left" Width="20" Height="20" Source="/imagens/white/editar.png"/>
+                            <TextBlock VerticalAlignment="Center" Margin="5">Alterar</TextBlock>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="btnConsultar"  Width="120" Height="40" HorizontalAlignment="Right"
+                        Margin="5"
+                        Style="{StaticResource BotaoPadrao}" Click="btnConsultar_Click" >
+                        <StackPanel Width="100" Orientation="Horizontal" HorizontalAlignment="Left">
+                            <Image VerticalAlignment="Center" Margin="5" HorizontalAlignment="Left" Width="20" Height="20" Source="/imagens/white/consultar.png"/>
+                            <TextBlock VerticalAlignment="Center" Margin="5">Consultar</TextBlock>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="btnExcluir"  Width="120" Height="40" HorizontalAlignment="Right"
+                        Margin="5"
+                        Style="{StaticResource BotaoPadrao}" Click="btnExcluir_Click" >
+                        <StackPanel Width="100" Orientation="Horizontal" HorizontalAlignment="Left">
+                            <Image VerticalAlignment="Center" Margin="5" HorizontalAlignment="Left" Width="20" Height="20" Source="/imagens/white/delete1.png"/>
+                            <TextBlock VerticalAlignment="Center" Margin="5" >Excluir</TextBlock>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="btnSair"  Width="120" Height="40" HorizontalAlignment="Right"
+                        Margin="5"
+                        Style="{StaticResource BotaoPadrao}" Click="btnSair_Click" >
+                        <StackPanel Width="100" Orientation="Horizontal" HorizontalAlignment="Left">
+                            <Image VerticalAlignment="Center" Margin="5" HorizontalAlignment="Left" Width="20" Height="20" Source="/imagens/white/exit.png"/>
+                            <TextBlock VerticalAlignment="Center" Margin="5">Sair</TextBlock>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+            </Grid>
+            <Grid  Margin="3,80,3,5">
+                <Grid Margin="0,0,0,0">
+                    <Border VerticalAlignment="Top" Height="100" BorderBrush="{DynamicResource PadraoBackGround}" BorderThickness="1">
+                    </Border>
+
+                    <Grid Height="100" VerticalAlignment="Top">
+                        <Button x:Name="BtnPesquisar"  Width="130" Height="40" HorizontalAlignment="Right"
+                        Margin="5"
+                        Style="{StaticResource BotaoPadrao}" Click="BtnPesquisar_Click" >
+                            <StackPanel Width="100" Orientation="Horizontal" HorizontalAlignment="Left">
+                                <Image VerticalAlignment="Center" Margin="5" HorizontalAlignment="Left" Width="20" Height="20" Source="/imagens/white/procurar.png"/>
+                                <TextBlock VerticalAlignment="Center" Margin="5">Procurar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+
+                    <Grid x:Name="quaPesquisa_Grid" Margin="0,100,0,0">
+                        <DataGrid x:Name="gridUsuario"
+                                  AutoGenerateColumns="False"
+                                  AlternationCount="2"
+                                  SelectionUnit="FullRow"
+                                  SelectionMode="Extended"
+                                  ColumnHeaderStyle="{DynamicResource columnHeaderStyle}" 
+                                  RowStyle="{DynamicResource rowStyle}"                                 
+                                  Margin="0"
+                                  CanUserAddRows="false"
+                                   ItemsSource="{Binding}"
+                                  >
+                            <DataGrid.Columns>
+
+                                <DataGridTextColumn Binding="{Binding USU_CODIGO}" Header="Id" Width="70" IsReadOnly="True"/>
+                                <DataGridTextColumn Binding="{Binding USU_USUARIO}" Header="Usuário" Width="150" IsReadOnly="True"/>
+                                <DataGridTextColumn Binding="{Binding USU_ATUALIZACAO}" Header="Atualização" Width="150" IsReadOnly="True"/>
+                                <DataGridCheckBoxColumn Binding="{Binding USU_INATIVO}" Header="Inativo" IsReadOnly="True" Width="60"/>
+                                <DataGridTemplateColumn Header="Alterar" Width="80"  >
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Button Style="{DynamicResource BotaoPadrao}" HorizontalContentAlignment="Center" Content="Alterar" x:Name="GridAlterar" Click="GridAlterar_Click" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="Excluir" Width="80" >
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Button Style="{StaticResource BotaoPadrao}" HorizontalContentAlignment="Center" Content="Excluir" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTextColumn  Header="" IsReadOnly="True" Width="*"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

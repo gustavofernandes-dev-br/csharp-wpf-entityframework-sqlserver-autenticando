@@ -1,0 +1,6 @@
+C:\NewPDVDesenvolvimento\NewPDV\Util\bin\Release\Util.dll
+C:\NewPDVDesenvolvimento\NewPDV\Util\bin\Release\Util.pdb
+C:\NewPDVDesenvolvimento\NewPDV\Util\obj\Release\Util.csprojAssemblyReference.cache
+C:\NewPDVDesenvolvimento\NewPDV\Util\obj\Release\Util.csproj.CoreCompileInputs.cache
+C:\NewPDVDesenvolvimento\NewPDV\Util\obj\Release\Util.dll
+C:\NewPDVDesenvolvimento\NewPDV\Util\obj\Release\Util.pdb

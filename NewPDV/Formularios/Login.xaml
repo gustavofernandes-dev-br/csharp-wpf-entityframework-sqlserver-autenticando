@@ -1,0 +1,30 @@
+﻿<Window x:Class="NewPDV.Formularios.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NewPDV"
+        mc:Ignorable="d"
+         Title="Entrar" Height="320" Width="500" 
+        WindowStartupLocation="CenterScreen" Background="White" >
+    <Grid>
+        <Grid Margin="200,0,0,0">
+            <StackPanel>
+                <Label FontFamily="Tempus Sans ITC"  Content="Usuário" Margin="70,40,10,0" FontSize="20" />
+                <TextBox x:Name="TxtUsuario" Background="White" SelectedText="User" Text="" Margin="70,0,70,10" 
+                             BorderBrush="BlueViolet"  BorderThickness="0,0,0,1" Height="30"
+                             FontSize="20"  PreviewKeyDown="TxtUsuario_PreviewKeyDown" FontWeight="Bold" >
+                </TextBox>
+                <Label FontFamily="Tempus Sans ITC"  Content="Senha" Margin="70,0,10,0" FontSize="20" />
+                <PasswordBox x:Name="TxtSenha" Background="White"  Margin="70,0,70,10" 
+                        BorderBrush="BlueViolet"  BorderThickness="0,0,0,1"
+                        FontSize="20" FontWeight="Bold" Height="30" KeyDown="TxtSenha_KeyDown"  />
+                <Button x:Name="BtnEntrar" FontFamily="Tempus Sans ITC"  Margin="90,25,70,25" Content="Entrar" Height="40" Background="White" Foreground="Black" FontWeight="Bold" FontSize="26" Width="130" Click="BtnEntrar_Click"  />
+
+            </StackPanel>
+        </Grid>
+        <Grid Width="200" HorizontalAlignment="Left" >
+            <Image Width="160" Source="/imagens/logoMarca.png" Stretch="Uniform"  ></Image>
+        </Grid>
+    </Grid>
+</Window>

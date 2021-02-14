@@ -1,0 +1,12 @@
+C:\NewPDVDesenvolvimento\NewPDV\Util\bin\Debug\Util.dll
+C:\NewPDVDesenvolvimento\NewPDV\Util\bin\Debug\Util.pdb
+C:\NewPDVDesenvolvimento\NewPDV\Util\obj\Debug\Util.csprojAssemblyReference.cache
+C:\NewPDVDesenvolvimento\NewPDV\Util\obj\Debug\Util.csproj.CoreCompileInputs.cache
+C:\NewPDVDesenvolvimento\NewPDV\Util\obj\Debug\Util.dll
+C:\NewPDVDesenvolvimento\NewPDV\Util\obj\Debug\Util.pdb
+C:\testes\NewPDVDesenvolvimento\NewPDV\Util\bin\Debug\Util.dll
+C:\testes\NewPDVDesenvolvimento\NewPDV\Util\bin\Debug\Util.pdb
+C:\testes\NewPDVDesenvolvimento\NewPDV\Util\obj\Debug\Util.csprojAssemblyReference.cache
+C:\testes\NewPDVDesenvolvimento\NewPDV\Util\obj\Debug\Util.csproj.CoreCompileInputs.cache
+C:\testes\NewPDVDesenvolvimento\NewPDV\Util\obj\Debug\Util.dll
+C:\testes\NewPDVDesenvolvimento\NewPDV\Util\obj\Debug\Util.pdb

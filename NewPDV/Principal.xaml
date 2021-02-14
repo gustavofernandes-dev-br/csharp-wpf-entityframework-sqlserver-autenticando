@@ -1,0 +1,211 @@
+﻿<Window x:Class="NewPDV.Principal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NewPDV"
+        xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+        mc:Ignorable="d"
+        Title="Home" Height="450" Width="800" WindowState="Maximized"  
+         
+        >
+    <Window.Resources>
+        <ResourceDictionary>
+            <Style x:Key="bordaPequena" TargetType="Border">
+                <Setter Property="Margin" Value="6"/>
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="BorderBrush" Value="Black"/>
+                <Setter Property="CornerRadius" Value="30"/>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="BorderBrush" Value="#FFFF99"/>
+                        <Setter Property="Background" Value="#FFFF99"/>
+                    </Trigger>
+                    <Trigger Property="IsMouseOver" Value="False">
+                        <Setter Property="BorderBrush" Value="White"/>
+                        <Setter Property="Background" Value="White"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+            <Style x:Key="borda" TargetType="Border">
+                <Setter Property="Width" Value="90"/>
+                <Setter Property="BorderThickness" Value="3"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="BorderBrush" Value="#FFFF99"/>
+                        <Setter Property="Background" Value="#FFFF99"/>
+                    </Trigger>
+                    <Trigger Property="IsMouseOver" Value="False">
+                        <Setter Property="BorderBrush" Value="White"/>
+                        <Setter Property="Background" Value="White"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+            <Style x:Key="Stac" TargetType="StackPanel">
+                <Setter Property="Orientation" Value="Vertical"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Background" Value="Transparent"/>
+            </Style>
+            <Style x:Key="labelMenu" TargetType="Label">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="FontFamily" Value="Segoe UI Semibold"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Foreground" Value="#696969" />
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="FontWeight" Value="ExtraBold"/>
+                    </Trigger>
+                    <Trigger Property="IsMouseOver" Value="False">
+                        <Setter Property="FontWeight" Value="Regular"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+            <Style x:Key="lmageMenu" TargetType="Image">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+                <Setter Property="Margin" Value="0"/>
+                <Setter Property="Width" Value="20"/>
+                <Setter Property="Height" Value="20"/>
+            </Style>
+
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid >
+        <!--Grid Width="200" HorizontalAlignment="Left" Margin="0,175,0,0" Grid.RowSpan="2">
+            <Canvas HorizontalAlignment="Left" Width="200">
+                <Grid x:Name="GridMenuLateral" Margin="-199,0,0,0" Background="Transparent">
+                    <StackPanel>
+                        <Border Style="{StaticResource borda}">
+                            <StackPanel Style="{StaticResource Stac}"  >
+                                <Image  Style="{StaticResource lmageMenu}" Source="imagens/homeBeta.png" />
+                                <Label  Content="Home" Style="{StaticResource labelMenu}"></Label>
+                            </StackPanel>
+                        </Border>
+                        <Border Style="{StaticResource borda}">
+                            <StackPanel Style="{StaticResource Stac}"  >
+                                <Image  Style="{StaticResource lmageMenu}" Source="imagens/pedidosBeta.png" />
+                                <Label  Content="Pedidos" Style="{StaticResource labelMenu}"></Label>
+                            </StackPanel>
+                        </Border>
+                        <Border Style="{StaticResource borda}">
+                            <StackPanel Style="{StaticResource Stac}"  >
+                                <Image  Style="{StaticResource lmageMenu}" Source="imagens/clientesBeta.png" />
+                                <Label  Content="Clientes" Style="{StaticResource labelMenu}"></Label>
+                            </StackPanel>
+                        </Border>
+                        <Border Style="{StaticResource borda}">
+                            <StackPanel x:Name="btnSair" Style="{StaticResource Stac}" MouseLeftButtonDown="btnSair_MouseLeftButtonDown"  >
+                                <Image  Style="{StaticResource lmageMenu}" Source="imagens/PowerBeta.png" />
+                                <Label  Content="Sair" Style="{StaticResource labelMenu}"></Label>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                </Grid>
+            </Canvas>
+        </-->
+        <Grid VerticalAlignment="Top" Margin="0,40,0,0" Height="100" >
+            <TabControl Name="tab">
+                <TabItem Header="Home" >
+                    <StackPanel Orientation="Horizontal">
+
+                        <Border Style="{StaticResource borda}">
+                            <StackPanel Style="{StaticResource Stac}"  >
+                                <Image  Style="{StaticResource lmageMenu}" Source="imagens/pedidosBeta.png" />
+                                <Label  Content="Pedidos" Style="{StaticResource labelMenu}"></Label>
+                            </StackPanel>
+                        </Border>
+                        <Border x:Name="btnClientes" Style="{StaticResource borda}" MouseLeftButtonDown="btnClientes_MouseLeftButtonDown">
+                            <StackPanel Style="{StaticResource Stac}"  >
+                                <Image  Style="{StaticResource lmageMenu}" Source="imagens/clientesBeta.png" />
+                                <Label  Content="Clientes" Style="{StaticResource labelMenu}"></Label>
+                            </StackPanel>
+                        </Border>
+                        <Border Style="{StaticResource borda}">
+                            <StackPanel Style="{StaticResource Stac}"  >
+                                <Image  Style="{StaticResource lmageMenu}" Source="imagens/moeda.png" />
+                                <Label  Content="Faturamento" Style="{StaticResource labelMenu}"></Label>
+                            </StackPanel>
+                        </Border>
+                        <Border Style="{StaticResource borda}">
+                            <StackPanel x:Name="btnSair" Style="{StaticResource Stac}"   >
+                                <Image  Style="{StaticResource lmageMenu}" Source="/imagens/PowerBeta.png" />
+                                <Label  Content="Sair" Style="{StaticResource labelMenu}"></Label>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                </TabItem>
+                <TabItem Header="Cadastros"/>
+                <TabItem Header="Relatórios"/>
+                <TabItem Header="Clientes"/>
+                <TabItem Header="Estoque"/>
+                <TabItem Header="Financeiro"/>
+                <TabItem Header="Faturamento"/>
+            </TabControl>
+        </Grid>
+        <Grid x:Name="quadroHome" Margin="0,120,0,0" Grid.RowSpan="2">
+            <Grid x:Name="quadroLogo">
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Image Width="200" Source="imagens/logoMarca.png"/>
+                </StackPanel>
+            </Grid>
+            <!--Grid Width="91" 
+                  HorizontalAlignment="Right" VerticalAlignment="Top" 
+                  x:Name="quadroTema" Visibility="Visible"
+                  Height="125" LostMouseCapture="quadroTema_LostMouseCapture"
+                  >
+                <StackPanel HorizontalAlignment="Right" >
+                    <Menu HorizontalAlignment="Right">
+                        <MenuItem x:Name="mnuConfiguracoes" Background="White" Header="Configurações">
+                            <MenuItem Background="White" x:Name="mnuParametrizacoes" Header="Parametrizações" ></MenuItem>
+                            <MenuItem Background="White" x:Name="mnuUsuario" Header="Usuarios" ></MenuItem>
+                            <MenuItem Background="White" x:Name="mnuBkp" Header="Backup" ></MenuItem>
+                            <MenuItem  Background="White"  Header="Temas"  >
+
+                                <MenuItem Background="White" Header="Branco" />
+                                <MenuItem Background="White" Header="Preto" />
+                                <MenuItem Background="White" Header="Azul" />
+                                <MenuItem Background="White" Header="Café" />
+                            </MenuItem>
+                        </MenuItem>
+                    </Menu>
+                </StackPanel>
+            </Grid-->
+        </Grid>
+        <Grid  Height="30" VerticalAlignment="Bottom" Grid.Row="1">
+            <Grid Height="30" Width="500" VerticalAlignment="Bottom" HorizontalAlignment="Left" >
+                <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+                    <Image Margin="5,0,0,0" Width="20" Height="20" Source="imagens/info.png"/>
+                    <Label Content="Versão:15/05/2019"></Label>
+                </StackPanel>
+            </Grid>
+            <Grid HorizontalAlignment="Right" Height="30" Margin="500,0,0,0" VerticalAlignment="Bottom">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Image Width="20" Height="20" Source="imagens/cadeadocolor.png"/>
+                    <Label Content="Master"></Label>
+                </StackPanel>
+
+            </Grid>
+        </Grid>
+        <Grid Margin="0,0,0,0" Background="White"  Height="40" VerticalAlignment="Top" Grid.RowSpan="2">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Column="1">
+
+                <Border Style="{StaticResource bordaPequena}">
+                    <Image x:Name="facebook" Margin="0" Width="30" Source="imagens/face.png" />
+                </Border>
+                <Border Style="{StaticResource bordaPequena}">
+                    <Image x:Name="Site" Margin="0" Width="30" Source="imagens/www.png" 
+                           
+                           />
+                </Border>
+                <Border Style="{StaticResource bordaPequena}">
+                    <Image  x:Name="btnConfig" Margin="0" Width="30" Source="imagens/configBeta.png" MouseLeftButtonDown="btnConfig_MouseLeftButtonDown" >
+
+                    </Image>
+                </Border>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
+

@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2B5534A1-6E72-465A-BC00-4AC696F73B71}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>NewPDV</RootNamespace>
+    <AssemblyName>NewPDV</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>NewPDV.App</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Formularios\ConfiguracaoInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ConfiguracaoInicial.Designer.cs">
+      <DependentUpon>ConfiguracaoInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Enumerados.cs" />
+    <Compile Include="Formularios\Iforms.cs" />
+    <Compile Include="Formularios\wpfCliente.xaml.cs">
+      <DependentUpon>wpfCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\wpfConfiguracoes.xaml.cs">
+      <DependentUpon>wpfConfiguracoes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\wpfUsuarios.xaml.cs">
+      <DependentUpon>wpfUsuarios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905210027477_Usuario.cs" />
+    <Compile Include="Migrations\201905210027477_Usuario.Designer.cs">
+      <DependentUpon>201905210027477_Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Negocio\Inicializazao\Inicializacao.cs" />
+    <Compile Include="Negocio\InstanciasPublicas\Pub.cs" />
+    <Compile Include="Resources\Tema.cs" />
+    <Compile Include="SqlDal\UsuarioAcesso.cs" />
+    <Compile Include="SqlDal\Usuarios.cs" />
+    <Compile Include="Sql\DadosBase.cs" />
+    <Compile Include="Sql\ConexaoSql.cs" />
+    <Page Include="Formularios\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Formularios\wpfCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Formularios\wpfConfiguracoes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Formularios\wpfUsuarios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Principal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Formularios\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sql\Model.cs" />
+    <Compile Include="Principal.xaml.cs">
+      <DependentUpon>Principal.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Resources\DictionaryResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Formularios\ConfiguracaoInicial.resx">
+      <DependentUpon>ConfiguracaoInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905210027477_Usuario.resx">
+      <DependentUpon>201905210027477_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Util\Util.csproj">
+      <Project>{37fe3433-0958-48ec-b53b-5e120b3781e8}</Project>
+      <Name>Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\businesBeta.png" />
+    <Resource Include="Imagens\cadeadoColor.png" />
+    <Resource Include="Imagens\cadeadopreto.png" />
+    <Resource Include="Imagens\ClientesBeta.png" />
+    <Resource Include="Imagens\configBeta.png" />
+    <Resource Include="Imagens\estrelaColor.png" />
+    <Resource Include="Imagens\face.png" />
+    <Resource Include="Imagens\homeBeta.png" />
+    <Resource Include="Imagens\info.png" />
+    <Resource Include="Imagens\logoMarca.png" />
+    <Resource Include="Imagens\menutracoBeta.png" />
+    <Resource Include="Imagens\moeda.png" />
+    <Resource Include="Imagens\PedidosBeta.png" />
+    <Resource Include="Imagens\PowerBeta.png" />
+    <Resource Include="Imagens\treeDotsBeta.png" />
+    <Resource Include="Imagens\User.png" />
+    <Resource Include="Imagens\www.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\fechar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\Fechar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\crudIncluir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\crudAlterar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\Pesquisar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\crudInativar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\crudSair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\consultaSQL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\white\consultar.png" />
+    <Resource Include="Imagens\white\delete1.png" />
+    <Resource Include="Imagens\white\add.png" />
+    <Content Include="Imagens\white\excluir.png" />
+    <Resource Include="Imagens\white\editar.png" />
+    <Resource Include="Imagens\white\exit.png" />
+    <Resource Include="Imagens\white\procurar.png" />
+    <Resource Include="Imagens\white\salvar.png" />
+    <Resource Include="Imagens\white\voltar.png" />
+    <Resource Include="Imagens\white\X.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

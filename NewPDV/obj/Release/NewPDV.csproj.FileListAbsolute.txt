@@ -1,0 +1,10 @@
+C:\NewPDVDesenvolvimento\NewPDV\NewPDV\obj\Release\NewPDV.csprojAssemblyReference.cache
+C:\NewPDVDesenvolvimento\NewPDV\NewPDV\obj\Release\Formularios\Login.g.cs
+C:\NewPDVDesenvolvimento\NewPDV\NewPDV\obj\Release\Formularios\wpfCliente.g.cs
+C:\NewPDVDesenvolvimento\NewPDV\NewPDV\obj\Release\Formularios\wpfConfiguracoes.g.cs
+C:\NewPDVDesenvolvimento\NewPDV\NewPDV\obj\Release\Formularios\wpfPadrao.g.cs
+C:\NewPDVDesenvolvimento\NewPDV\NewPDV\obj\Release\Formularios\wpfUsuarios.g.cs
+C:\NewPDVDesenvolvimento\NewPDV\NewPDV\obj\Release\Principal.g.cs
+C:\NewPDVDesenvolvimento\NewPDV\NewPDV\obj\Release\App.g.cs
+C:\NewPDVDesenvolvimento\NewPDV\NewPDV\obj\Release\NewPDV_MarkupCompile.cache
+C:\NewPDVDesenvolvimento\NewPDV\NewPDV\obj\Release\NewPDV_MarkupCompile.lref
